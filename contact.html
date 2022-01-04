@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Us | Scream House</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+
+    <link href="img/favicon.png" rel="shortcut icon" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/plugins.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/howtoplayicon/flaticon.css" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+
+    <script src="grafpanel/assets/global/plugins/sweetalert/sweetalert-dev.js"></script>
+    <link
+      rel="stylesheet"
+      href="grafpanel/assets/global/plugins/sweetalert/sweetalert.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).on("submit", "#contact-form", function (e) {
+        var $data = new FormData(this);
+
+        $.ajax({
+          url: "post/iletisim.php",
+          data: $data,
+          //dataType: "JSON",
+          contentType: false,
+          processData: false,
+          type: "POST",
+          success: function (response) {
+            var data = JSON.parse(response);
+            sweetAlert(
+              { title: data["title"], text: data["text"], type: data["state"] },
+              function () {
+                window.location.href = "contact";
+              }
+            );
+            return true;
+          },
+        });
+      });
+    </script>
+  </head>
+
+  <body class="dark">
+    <div id="preloader">
+      <div class="loading-text"><img src="img/logo.png" /></div>
+    </div>
+
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+
+
+    <div id="navi" class="topnav">
+      <div class="container-fluid">
+          <div class="logo">
+              <a href="/"><img src="img/scream house.png" alt="Scream House"></a>
+          </div>
+          <div class="menu-icon">
+              <span class="icon">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+              </span>
+              <span class="text" data-splitting>Menu</span>
+          </div>
+      </div>
+    </div>
+    <div class="hamenu">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-8">
+            <div class="menu-links">
+              <ul class="main-menu">
+                <li>
+                  <div class="o-hidden">
+                    <a href="/" class="link"><span class="nm">01.</span>Home</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="about-us.html" class="link"
+                      ><span class="nm">02.</span>About Us</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="rooms.html" class="link"
+                      ><span class="nm">03.</span>Our Games
+                      <span class="reflect">Book Now!</span></a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="events.html" class="link"
+                      ><span class="nm">04.</span>Events</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="blog.html" class="link"
+                      ><span class="nm">05.</span>Blog</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="comment" class="link"
+                      ><span class="nm">06.</span>Comment</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="disclaimer-and-liability.html" class="link"
+                      ><span class="nm">07.</span>Disclaimer and Liability</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="o-hidden">
+                    <a href="contact.html" class="link"
+                      ><span class="nm">08.</span>Contact</a
+                    >&nbsp;<a href="tel:+971564500541"
+                      ><span class="reflect">+971 56 450 0541</span></a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="cont-info">
+              <div class="item">
+                <h6>Phone :</h6>
+                <p style="font-weight: 900">
+                  <i class="fas fa-phone"></i>
+                  <i class="fab fa-whatsapp"></i> +971 56 450 0541
+                </p>
+              </div>
+              <div class="item">
+                <h6>Address :</h6>
+                <p>Villa 606 - Al Wasl Rd - JumeirahJumeirah 3 - Dubai</p>
+              </div>
+              <div class="item">
+                <h6>Email :</h6>
+                <p>
+                  <a
+                    href="/cdn-cgi/l/email-protection"
+                    class="__cf_email__"
+                    data-cfemail="9bf2f5fdf4dbfee8f8faebfef3f4eee8feeefafeb5f8f4f6"
+                    >[email&#160;protected]</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <section class="page-header section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-9">
+              <div class="cont">
+                <h4>
+                  Do you want to work <span class="stroke">together</span>, or
+                  talk about an <span class="stroke">idea?</span> Let's do this.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="img-wrapper">
+          <div class="title">
+            <div class="container">
+              <h3>Contact Us</h3>
+            </div>
+          </div>
+          <div class="map" id="ieatmaps">
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=tashkent&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:300px;width:100vw;}</style><a href="https://www.embedgooglemap.net">google map on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:100vw;}</style></div></div>
+        </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form">
+                <form id="contact-form" method="post" onSubmit="return false">
+                  <div class="controls">
+                    <div class="form-group">
+                      <input
+                        id="form_name"
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        id="form_email"
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        id="form_phone"
+                        type="text"
+                        name="phone"
+                        placeholder="Phone"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <textarea
+                        id="form_message"
+                        name="message"
+                        placeholder="Message"
+                        rows="4"
+                        required="required"
+                      ></textarea>
+                    </div>
+                    <button type="submit" class="btn-curve btn-wit">
+                      <span>Send Message</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+              <div class="cont-info">
+                <h2 class="extra-title wow" data-splitting>Let's Talk.</h2>
+                <div class="item mb-40">
+                  <h5>
+                    <a href="#0"
+                      ><i class="far fa-envelope-open"></i>
+                      <span
+                        class="__cf_email__"
+                        data-cfemail="83eaede5ecc3e6f0e0e2f3e6ebecf6f0e6f6e2e6ade0ecee"
+                        >[email&#160;protected]</span
+                      ></a
+                    >
+                  </h5>
+                  <h5>
+                    <i class="fas fa-phone"></i>
+                   +971565810501
+                  </h5>
+                </div>
+                <h2 class="extra-title wow" data-splitting>Visit Us.</h2>
+                <div class="item">
+                  <h6>
+                    Al Quoz, First Al Khail street, 8th street 
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="call-action section-padding" data-overlay-dark="0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content text-center">
+                        <h6 class="wow" data-splitting>Let’s Talk</h6>
+
+                        <h2 class="wow" data-splitting>Scream House </h2>
+                        <a href="contact.html" class="btn-curve btn-lit mt-30"><span>Get In Touch</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <footer class="footer-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4">
+                    <div class="left">
+                        <p>Scream House © 2021 All right reserved.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="right">
+                        <p>Design & Software <a href="#">Graf Studios</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+
+    <script src="js/scripts.js"></script>
+
+    <script src="js/map.js"></script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1xid59-8VVA5eDu7-c3siGeOMEltHH18&callback=initMap"
+    ></script>
+  </body>
+</html>
