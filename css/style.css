@@ -286,7 +286,7 @@ a:hover {
   transition-delay: 0.5s;
 }
 #preloader .loading-text img {
-  width: 180px;
+  width: 450px;
 }
 @media screen and (max-width: 500px) {
   #preloader {
