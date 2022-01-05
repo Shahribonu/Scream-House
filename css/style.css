@@ -3746,7 +3746,7 @@ body.dark .contact .form select {
     font-size: 12px;
   }
   .topnav .logo {
-    width: 60px;
+    width: 220px;
   }
   .section-head {
     margin-bottom: 60px !important;
@@ -4032,7 +4032,7 @@ body.dark .contact .form select {
 }
 @media screen and (max-width: 480px) {
   .topnav .logo {
-    width: 100px;
+    width: 240px;
   }
   .topnav .menu-icon {
     margin-left: auto;
