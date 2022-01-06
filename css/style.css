@@ -1430,7 +1430,7 @@ a:hover {
 .page-header.proj-det .img-wrapper .video span.video-icon i {
   text-shadow: 0 0 50px #000;
 }
-.page-header.proj-det . .video .container {
+.page-header.proj-det .video .container {
   position: absolute;
   padding: 10px 0 30px;
   bottom: 0;
@@ -4039,8 +4039,7 @@ body.dark .contact .form select {
     cursor: pointer;
     padding-top: 15px;
   }
-  .page-header {
-  }
+ 
   .section-padding {
     padding: 100px 0 50px;
   }
