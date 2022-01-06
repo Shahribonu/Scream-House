@@ -1430,7 +1430,7 @@ a:hover {
 .page-header.proj-det .img-wrapper .video span.video-icon i {
   text-shadow: 0 0 50px #000;
 }
-.page-header.proj-det .img-wrapper .video .container {
+.page-header.proj-det . .video .container {
   position: absolute;
   padding: 10px 0 30px;
   bottom: 0;
@@ -3648,7 +3648,7 @@ body.dark .contact .form select {
     padding-top: 0;
   }
   .page-header .img-wrapper .title h3 {
-    font-size: 70px;
+    font-size: 60px;
   }
   .contact .form {
     margin-bottom: 50px;
@@ -3746,7 +3746,7 @@ body.dark .contact .form select {
     font-size: 12px;
   }
   .topnav .logo {
-    width: 220px;
+    width: 250px;
   }
   .section-head {
     margin-bottom: 60px !important;
@@ -4032,7 +4032,7 @@ body.dark .contact .form select {
 }
 @media screen and (max-width: 480px) {
   .topnav .logo {
-    width: 240px;
+    width: 220px;
   }
   .topnav .menu-icon {
     margin-left: auto;

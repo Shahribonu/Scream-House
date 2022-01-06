@@ -1,70 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<title>Events | Scream House</title>
+    <title>Events | Scream House</title>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
-<link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="shortcut icon">
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&amp;display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/plugins.css" />
+    <link rel="stylesheet" href="css/plugins.css" />
 
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/howtoplayicon/flaticon.css" />
-<link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
-<link rel="stylesheet" type="text/css" href="js/calendar/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="js/calendar/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/howtoplayicon/flaticon.css" />
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
 
-<script src="grafpanel/assets/global/plugins/sweetalert/sweetalert-dev.js"></script>
-<link rel="stylesheet" href="grafpanel/assets/global/plugins/sweetalert/sweetalert.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript">
-        $(document).on("submit", "#event-form", function (e) {
-
-            var $data = new FormData(this);
-
-            var event = $('#event').val();
-            
-            if(saatler == 0)
-            { 
-                sweetAlert({title: "Opps!", text: "Please select a event.", type: "error"});
-                return false;
-            }
-            else{
-                $.ajax({
-                    url: "post/events.php",
-                    data: $data,
-                    //dataType: "JSON",
-                    contentType: false,
-                    processData: false,
-                    type: "POST",
-                    success: function(response)
-                    {
-                        var data = JSON.parse(response);
-                        sweetAlert({title: data["title"], text: data["text"], type: data["state"]},
-                        function () {
-                            window.location.href = "events";
-                        });
-                        return true;
-                    }
-                });
-            }
-                            
-                
-                        
-        });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+
 <body class="dark">
 
     <div id="preloader">
@@ -72,235 +36,343 @@
     </div>
 
 
-<div class="progress-wrap">
-<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-</svg>
-</div>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
 
 
-<div id="navi" class="topnav">
-    <div class="container-fluid">
-        <div class="logo">
-            <a href="/"><img src="img/scream house.png" alt="Scream House"></a>
-        </div>
-        <div class="menu-icon">
-            <span class="icon">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
-            <span class="text" data-splitting>Menu</span>
+    <div id="navi" class="topnav">
+        <div class="container-fluid">
+            <div class="logo">
+                <a href="/"><img src="img/scream house.png" alt="Scream House"></a>
+            </div>
+            <div class="menu-icon">
+                <span class="icon">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <span class="text" data-splitting>Menu</span>
+            </div>
         </div>
     </div>
-</div>
-<div class="hamenu">
-<div class="container">
-<div class="row">
-<div class="col-lg-9 col-md-8">
-<div class="menu-links">
-<ul class="main-menu">
-<li>
-<div class="o-hidden">
-<a href="/" class="link"><span class="nm">01.</span>Home</a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="about-us.html" class="link"><span class="nm">02.</span>About Us</a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="rooms.html" class="link"><span class="nm">03.</span>Our Games <span class="reflect">Book Now!</span></a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="events.html" class="link"><span class="nm">04.</span>Events</a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="blog.html" class="link"><span class="nm">05.</span>Blog</a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="comment.html" class="link"><span class="nm">06.</span>Comment</a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="disclaimer-and-liability.html" class="link"><span class="nm">07.</span>Disclaimer and Liability</a>
-</div>
-</li>
-<li>
-<div class="o-hidden">
-<a href="contact.html" class="link"><span class="nm">08.</span>Contact</a>&nbsp;<a href="tel:+971564500541"><span class="reflect">+971 56 450 0541</span></a>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-lg-3 col-md-4">
-<div class="cont-info">
-<div class="item">
-<h6>Phone :</h6>
-<p style="font-weight: 900;"><i class="fas fa-phone"></i> <i class="fab fa-whatsapp"></i> +971 56 450 0541</p>
-</div>
-<div class="item">
-<h6>Address :</h6>
-<p>Villa 606 - Al Wasl Rd - JumeirahJumeirah 3 - Dubai</p>
-</div>
-<div class="item">
-<h6>Email :</h6>
-<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6900070f06290c1a0a08190c01061c1a0c1c080c470a0604">[email&#160;protected]</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="wrapper">
-
-<section class="contact section-padding">
-<div class="container">
-
-<div class="row">
-<div class="col-lg-12 col-md-12">
-<div class="content-header text-center mb-50">
-<div class="title-header"><h2>Events</h2></div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-12">
-<div class="form">
-<form method="post" id="event-form" onSubmit="return false">
-<div class="messages"></div>
-<div class="controls row">
-<div class="col-sm-12">
-<div class="form-group">
-<div class="entry-box w-100">
-<select name="event" id="event">
-<option value="0">Choose Event</option>
-<option value="Birthday Party">Birthday Party</option>
-<option value="Corporate">Corporate</option>
-</select>
-</div>
-<div class="help-block with-errors"></div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="form-group">
-<div class="entry-box w-100">
-<input type="text" name="adsoyad" id="adsoyad" placeholder="Your Name Surname" required="required">
-</div>
-<div class="help-block with-errors"></div>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="form-group">
-<div class="entry-box w-100">
-<input type="email" name="eposta" id="eposta" placeholder="Your E-Mail Address" required="required">
-</div>
-<div class="help-block with-errors"></div>
-</div>
-</div>
-<div class="col-sm-6">
-<div class="form-group">
-<div class="entry-box w-100">
-<input type="text" name="telefon" id="telefon" placeholder="Your Phone Number" required="required">
-</div>
-<div class="help-block with-errors"></div>
-</div>
-</div>
-<div class="col-md-12">
-<div class="form-group">
-<div class="entry-box w-100">
-<textarea class="form-control" name="message" id="message" placeholder="Your Notes" required="required"></textarea>
-</div>
-<div class="help-block with-errors"></div>
-</div>
-</div>
-<div class="col-md-12">
-<div class="form-group text-center">
- <button type="submit" class="btn-curve btn-wit"><span>Send Form</span></button>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section class="call-action section-padding" data-overlay-dark="0">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="content text-center">
-                    <h6 class="wow" data-splitting>Let’s Talk</h6>
-
-                    <h2 class="wow" data-splitting>Scream House </h2>
-                    <a href="contact.html" class="btn-curve btn-lit mt-30"><span>Get In Touch</span></a>
+    <div class="hamenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <div class="menu-links">
+                        <ul class="main-menu">
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="/" class="link"><span class="nm">01.</span>Home</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="about-us.html" class="link"><span class="nm">02.</span>About Us</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="rooms.html" class="link"><span class="nm">03.</span>Our Games <span
+                                            class="reflect">Book Now!</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="events.html" class="link"><span class="nm">04.</span>Events</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="blog.html" class="link"><span class="nm">05.</span>Blog</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="comment.html" class="link"><span class="nm">06.</span>Comment</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="disclaimer-and-liability.html" class="link"><span
+                                            class="nm">07.</span>Disclaimer and Liability</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="o-hidden">
+                                    <a href="contact.html" class="link"><span class="nm">08.</span>Contact</a>&nbsp;<a
+                                        href="tel:+971564500541"><span class="reflect">+971 56 450 0541</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <div class="cont-info">
+                        <div class="item">
+                            <h6>Phone :</h6>
+                            <p style="font-weight: 900;"><i class="fas fa-phone"></i> <i class="fab fa-whatsapp"></i>
+                                +971 56 450 0541</p>
+                        </div>
+                        <div class="item">
+                            <h6>Address :</h6>
+                            <p>Villa 606 - Al Wasl Rd - JumeirahJumeirah 3 - Dubai</p>
+                        </div>
+                        <div class="item">
+                            <h6>Email :</h6>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="6900070f06290c1a0a08190c01061c1a0c1c080c470a0604">[email&#160;protected]</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<footer class="footer-sm">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-4">
-                <div class="left">
-                    <p>Scream House © 2021 All right reserved.</p>
+
+    <div class="wrapper">
+
+        <section class="contact section-padding">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="content-header text-center mb-50">
+                            <div class="title-header">
+                                <h2>Events</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form">
+                            <form method="post" id="event-form" onSubmit="return false">
+                                <div class="messages"></div>
+                                <div class="controls row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <div class="entry-box w-100">
+                                                <select name="event" id="event">
+                                                    <option value="0">Choose Event</option>
+                                                    <option value="Birthday Party">Birthday Party</option>
+                                                    <option value="Corporate">Corporate</option>
+                                                </select>
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <div class="entry-box w-100">
+                                                <input type="text" name="adsoyad" id="adsoyad"
+                                                    placeholder="Your Name Surname" required="required">
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="entry-box w-100">
+                                                <input type="email" name="eposta" id="eposta"
+                                                    placeholder="Your E-Mail Address" required="required">
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="entry-box w-100">
+                                                <input type="text" name="telefon" id="telefon"
+                                                    placeholder="Your Phone Number" required="required">
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="entry-box w-100">
+                                                <textarea class="form-control" name="message" id="message"
+                                                    placeholder="Your Notes" required="required"></textarea>
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group text-center">
+                                            <button type="submit" class="btn-curve btn-wit"
+                                                onclick="sendEmail()"><span>Send
+                                                    Form</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-8">
-                <div class="right">
-                    <p>Design & Software <a href="#">Graf Studios</a></p>
+        </section>
+
+
+        <section class="call-action section-padding" data-overlay-dark="0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="content text-center">
+                            <h6 class="wow" data-splitting>Let’s Talk</h6>
+
+                            <h2 class="wow" data-splitting>Scream House </h2>
+                            <a href="contact.html" class="btn-curve btn-lit mt-30"><span>Get In Touch</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <footer class="footer-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-4">
+                        <div class="left">
+                            <p>Scream House © 2021 All right reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <div class="right">
+                            <p>Design & Software <a href="#">Graf Studios</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
-</footer>
-
-</div>
 
 
-<div class="cursor"></div>
-<div class="cursor2"></div>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
 
-<script src="js/plugins.js"></script>
+    <script src="js/plugins.js"></script>
 
-<script src="js/scripts.js"></script>
-<script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js“></script>
-<script type="text/javascript" src="js/calendar/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/calendar/bootstrap-datepicker.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
+    <script src="js/scripts.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js“></script>
+    <script type="text/javascript">
+        function sendEmail() {
+            let event = document.getElementById("event").value;
+            let name = document.getElementById("adsoyad").value;
+            let email = document.getElementById("eposta").value;
+            let tel = document.getElementById("telefon").value;
+            let message = document.getElementById("message").value;
+            const html = `
+        <div id=":16h" class="ii gt" jslog="20277; u014N:xr6bB; 4:W251bGwsbnVsbCxbXV0."><div id=":1rh" class="a3s aiL "><div class="adM">
+            </div><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td colspan="3" width="100%" height="40" style="background:#333;font-family:Arial;color:#fff;padding-left:10px;font-size:16px;font-weight:bold">Send Events message</td>
+              </tr>
 
-        $('#sandbox-container input').datepicker({
-            format: "dd.mm.yyyy",
-            startDate: "-ınfinity",
-            todayHighlight: true
-        });
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Name Surname</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${event}</td>
+              </tr>
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Name Surname</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${name}</td>
+              </tr>
 
-    });
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">E-Mail</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal"><a href="mailto:navoiy498@gmail.com" target="_blank">${email}</a></td>
+              </tr>
 
-    
-</script>
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Phone</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${tel}</td>
+              </tr>
+
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Message</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${message}</td>
+              </tr>
+
+
+            </tbody></table><div class="yj6qo"></div><div class="adL">
+
+      </div></div></div>
+        `;
+            if (event == "") {
+                swal({
+                    title: "Opps!",
+                    text: "Please select a event.",
+                    icon: "error",
+                });
+                return false;
+            } else if (name == "") {
+                    swal({
+                        title: "Opps!",
+                        text: "Please enter your name and surname.",
+                        icon: "error",
+                    });
+                    return false;
+                } else if (email == "") {
+                    swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
+                    return false;
+                } else if (tel == "") {
+                    swal({
+                        title: "Opps!",
+                        text: "Please enter a phone.",
+                        icon: "error",
+                    });
+                    return false;
+                } else if (message == "") {
+                    swal({
+                        title: "Opps!",
+                        text: "You must read and accept all terms.",
+                        icon: "error",
+                    });
+                    return false;
+                } else {
+                    Email.send({
+                        Host: "smtp.elasticemail.com",
+                        Username: "jumaboyevqobiljon17@gmail.com",
+                        Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
+                        To: "jumaboyevqobiljon784@gmail.com",
+                        From: "jumaboyevqobiljon17@gmail.com",
+                        Subject: "escapehouse.uz",
+                        Body: html,
+                    }).then((message) => {
+                        if ((message = "Ok")) {
+                            swal("Success", "You clicked the button!", "success");
+                            window.location.href = "events.html";
+                            return true;
+                        } else {
+                            swal({
+                                title: "Opps! Error",
+                                text: "Please select a time.",
+                                icon: "error",
+                            });
+                            return false;
+                        }
+                    });
+                }
+        }
+    </script>
 </body>
+
 </html>

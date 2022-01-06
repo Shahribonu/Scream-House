@@ -10,7 +10,6 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
 
-
     <link href="img/favicon.png" rel="shortcut icon" />
 
     <link
@@ -36,43 +35,22 @@
     <link rel="stylesheet" href="css/howtoplayicon/flaticon.css" />
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
 
-    <script src="grafpanel/assets/global/plugins/sweetalert/sweetalert-dev.js"></script>
     <link
       rel="stylesheet"
-      href="grafpanel/assets/global/plugins/sweetalert/sweetalert.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(document).on("submit", "#contact-form", function (e) {
-        var $data = new FormData(this);
-
-        $.ajax({
-          url: "post/iletisim.php",
-          data: $data,
-          //dataType: "JSON",
-          contentType: false,
-          processData: false,
-          type: "POST",
-          success: function (response) {
-            var data = JSON.parse(response);
-            sweetAlert(
-              { title: data["title"], text: data["text"], type: data["state"] },
-              function () {
-                window.location.href = "contact";
-              }
-            );
-            return true;
-          },
-        });
-      });
-    </script>
   </head>
 
   <body class="dark">
     <div id="preloader">
-      <div class="loading-text"><img src="img/scream house.png"></div>
-  </div>
+      <div class="loading-text"><img src="img/scream house.png" /></div>
+    </div>
 
     <div class="progress-wrap">
       <svg
@@ -85,20 +63,19 @@
       </svg>
     </div>
 
-
     <div id="navi" class="topnav">
       <div class="container-fluid">
-          <div class="logo">
-              <a href="/"><img src="img/scream house.png" alt="Scream House"></a>
-          </div>
-          <div class="menu-icon">
-              <span class="icon">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-              </span>
-              <span class="text" data-splitting>Menu</span>
-          </div>
+        <div class="logo">
+          <a href="/"><img src="img/scream house.png" alt="Scream House" /></a>
+        </div>
+        <div class="menu-icon">
+          <span class="icon">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+          <span class="text" data-splitting>Menu</span>
+        </div>
       </div>
     </div>
     <div class="hamenu">
@@ -218,8 +195,39 @@
             </div>
           </div>
           <div class="map" id="ieatmaps">
-            <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=tashkent&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:300px;width:100vw;}</style><a href="https://www.embedgooglemap.net">google map on website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:100vw;}</style></div></div>
-        </div>
+            <div class="mapouter">
+              <div class="gmap_canvas">
+                <iframe
+                  width="100%"
+                  height="300"
+                  id="gmap_canvas"
+                  src="https://maps.google.com/maps?q=tashkent&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  frameborder="0"
+                  scrolling="no"
+                  marginheight="0"
+                  marginwidth="0"
+                ></iframe
+                ><br />
+                <style>
+                  .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 300px;
+                    width: 100vw;
+                  }</style
+                ><a href="https://www.embedgooglemap.net"
+                  >google map on website</a
+                >
+                <style>
+                  .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 300px;
+                    width: 100vw;
+                  }
+                </style>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -229,7 +237,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form">
-                <form id="contact-form" method="post" onSubmit="return false">
+                <form id="contact-form" method="Post" onSubmit="return false">
                   <div class="controls">
                     <div class="form-group">
                       <input
@@ -267,7 +275,11 @@
                         required="required"
                       ></textarea>
                     </div>
-                    <button type="submit" class="btn-curve btn-wit">
+                    <button
+                      type="submit"
+                      class="btn-curve btn-wit"
+                      onclick="sendEmail() "
+                    >
                       <span>Send Message</span>
                     </button>
                   </div>
@@ -290,14 +302,12 @@
                   </h5>
                   <h5>
                     <i class="fas fa-phone"></i>
-                   +971565810501
+                    +971565810501
                   </h5>
                 </div>
                 <h2 class="extra-title wow" data-splitting>Visit Us.</h2>
                 <div class="item">
-                  <h6>
-                    Al Quoz, First Al Khail street, 8th street 
-                  </h6>
+                  <h6>Al Quoz, First Al Khail street, 8th street</h6>
                 </div>
               </div>
             </div>
@@ -307,63 +317,153 @@
 
       <section class="call-action section-padding" data-overlay-dark="0">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="content text-center">
-                        <h6 class="wow" data-splitting>Let’s Talk</h6>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="content text-center">
+                <h6 class="wow" data-splitting>Let’s Talk</h6>
 
-                        <h2 class="wow" data-splitting>Scream House </h2>
-                        <a href="contact.html" class="btn-curve btn-lit mt-30"><span>Get In Touch</span></a>
-                    </div>
-                </div>
+                <h2 class="wow" data-splitting>Scream House</h2>
+                <a href="contact.html" class="btn-curve btn-lit mt-30"
+                  ><span>Get In Touch</span></a
+                >
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
+      </section>
 
       <footer class="footer-sm">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-4">
-                    <div class="left">
-                        <p>Scream House © 2021 All right reserved.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-8">
-                    <div class="right">
-                        <p>Design & Software <a href="#">Graf Studios</a></p>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-4">
+              <div class="left">
+                <p>Scream House © 2021 All right reserved.</p>
+              </div>
             </div>
+            <div class="col-lg-6 col-md-8">
+              <div class="right">
+                <p>Design & Software <a href="#">Graf Studios</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     </div>
 
     <div class="cursor"></div>
     <div class="cursor2"></div>
 
     <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
 
     <script src="js/plugins.js"></script>
 
     <script src="js/scripts.js"></script>
 
-    <script src="js/map.js"></script>
-
     <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1xid59-8VVA5eDu7-c3siGeOMEltHH18&callback=initMap"
     ></script>
+    <script type="text/javascript">
+      function sendEmail() {
+        let name = document.getElementById("form_name").value;
+        let email = document.getElementById("form_email").value;
+        let tel = document.getElementById("form_phone").value;
+        let message = document.getElementById("form_message").value;
+        const html = `
+        <div id=":16h" class="ii gt" jslog="20277; u014N:xr6bB; 4:W251bGwsbnVsbCxbXV0."><div id=":1rh" class="a3s aiL "><div class="adM">
+            </div><table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td colspan="3" width="100%" height="40" style="background:#333;font-family:Arial;color:#fff;padding-left:10px;font-size:16px;font-weight:bold">Send Comment message</td>
+              </tr>
+
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Name Surname</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${name}</td>
+              </tr>
+
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">E-Mail</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal"><a href="mailto:navoiy498@gmail.com" target="_blank">${email}</a></td>
+              </tr>
+
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Phone</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${tel}</td>
+              </tr>
+
+              <tr style="border-bottom:1px solid #ccc">
+                <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Message</td>
+                <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+                <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${message}</td>
+              </tr>
+
+
+            </tbody></table><div class="yj6qo"></div><div class="adL">
+
+      </div></div></div>
+        `;
+
+        if (name == "") {
+          swal({
+            title: "Opps!",
+            text: "Please enter your name and surname.",
+            icon: "error",
+          });
+          return false;
+        } else if (email == "") {
+          swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
+          return false;
+        } else if (tel == "") {
+          swal({
+            title: "Opps!",
+            text: "Please enter a phone.",
+            icon: "error",
+          });
+          return false;
+        } else if (message == "") {
+          swal({
+            title: "Opps!",
+            text: "You must read and accept all terms.",
+            icon: "error",
+          });
+          return false;
+        } else {
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "jumaboyevqobiljon17@gmail.com",
+            Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
+            To: "jumaboyevqobiljon784@gmail.com",
+            From: "jumaboyevqobiljon17@gmail.com",
+            Subject: "escapehouse.uz",
+            Body: html,
+          }).then((message) => {
+            if ((message = "Ok")) {
+              swal("Success", "You clicked the button!", "success");
+              window.location.href = "contact.html";
+              return true;
+            } else {
+              swal({
+                title: "Opps!",
+                text: "Please select a time.",
+                icon: "error",
+              });
+              return false;
+            }
+          });
+        }
+      }
+    </script>
   </body>
 </html>

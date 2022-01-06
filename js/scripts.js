@@ -311,25 +311,7 @@ $(function () {
     dots: false,
     focusOnSelect: true,
   });
-  var anim = true;
 
-  // wind.on("scroll", function () {
-  //   var bodyScroll = wind.scrollTop();
-  //   // var _target = $(".about").offset().top - 75;
-  //   if (bodyScroll >= _target) {
-  //     if (anim) {
-  //       $(".about .svg-icon").each(function () {
-  //         var $svg = $(".svg-icon").drawsvg({
-  //           duration: 4000,
-  //         });
-  //         $svg.drawsvg("animate");
-  //       });
-  //       anim = false;
-  //     }
-  //   }
-  // });
-
-  
   $("a.vid").YouTubePopUp();
   $(".parallaxie").parallaxie({
     speed: 0.2,
