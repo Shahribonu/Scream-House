@@ -11,6 +11,15 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: bigger;
+  src: url(fonts/bloodlust.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -2306,10 +2315,10 @@ a:hover {
   text-align: center;
 }
 .testimonials .author {
-  width: 90px;
-  height: 90px;
+  width: 140px;
+ 
   margin: auto;
-  border-radius: 50%;
+
   overflow: hidden;
 }
 .testimonials h6 {
