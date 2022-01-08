@@ -1,4 +1,12 @@
-const date = localStorage.getItem("date");
+let date;
+let reservation_date = new URLSearchParams(window.location.search);
+
+const insertDate = document.getElementById("dateOfGame");
+
+if (reservation_date) {
+  date = reservation_date.get("reservation_date");
+  insertDate.innerHTML = date;
+}
 
 function sendEmail() {
   const room = document.getElementById("roomType").innerHTML;
@@ -140,13 +148,4 @@ function sendEmail() {
       }
     });
   }
-}
-
-const insertDate = document.getElementById("dateOfGame");
-
-insertDate.innerHTML = date;
-
-function saveDate() {
-  const date = document.querySelector(".js-date").value;
-  localStorage.setItem("date", date);
 }
