@@ -129,7 +129,7 @@ function sendEmail() {
       Host: "smtp.elasticemail.com",
       Username: "jumaboyevqobiljon17@gmail.com",
       Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
-      To: "jumaboyevqobiljon784@gmail.com",
+      To: "screamhouseae@gmail.com",
       From: "jumaboyevqobiljon17@gmail.com",
       Subject: "escapehouse.uz",
       Body: html,

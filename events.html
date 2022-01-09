@@ -32,6 +32,12 @@
 <body class="dark">
 
     <div id="preloader">
+        <div class="body">
+            <div class="loader">
+                <div class="inner">
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -122,8 +128,7 @@
                         </div>
                         <div class="item">
                             <h6>Email :</h6>
-                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                    data-cfemail="c1a8afa7ae81a4b2a2a0b1a4a9aeb4b2a4b4a0a4efa2aeac">[email&#160;protected]</a>
+                            <p><a href="/" class="__cf_email__">screamhouseae@gmail.com</a>
                             </p>
                         </div>
                     </div>
@@ -323,53 +328,53 @@
                 });
                 return false;
             } else if (name == "") {
-                    swal({
-                        title: "Opps!",
-                        text: "Please enter your name and surname.",
-                        icon: "error",
-                    });
-                    return false;
-                } else if (email == "") {
-                    swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
-                    return false;
-                } else if (tel == "") {
-                    swal({
-                        title: "Opps!",
-                        text: "Please enter a phone.",
-                        icon: "error",
-                    });
-                    return false;
-                } else if (message == "") {
-                    swal({
-                        title: "Opps!",
-                        text: "You must read and accept all terms.",
-                        icon: "error",
-                    });
-                    return false;
-                } else {
-                    Email.send({
-                        Host: "smtp.elasticemail.com",
-                        Username: "jumaboyevqobiljon17@gmail.com",
-                        Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
-                        To: "jumaboyevqobiljon784@gmail.com",
-                        From: "jumaboyevqobiljon17@gmail.com",
-                        Subject: "escapehouse.uz",
-                        Body: html,
-                    }).then((message) => {
-                        if ((message = "Ok")) {
-                            swal("Success", "You clicked the button!", "success");
-                            window.location.href = "events.html";
-                            return true;
-                        } else {
-                            swal({
-                                title: "Opps! Error",
-                                text: "Please select a time.",
-                                icon: "error",
-                            });
-                            return false;
-                        }
-                    });
-                }
+                swal({
+                    title: "Opps!",
+                    text: "Please enter your name and surname.",
+                    icon: "error",
+                });
+                return false;
+            } else if (email == "") {
+                swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
+                return false;
+            } else if (tel == "") {
+                swal({
+                    title: "Opps!",
+                    text: "Please enter a phone.",
+                    icon: "error",
+                });
+                return false;
+            } else if (message == "") {
+                swal({
+                    title: "Opps!",
+                    text: "You must read and accept all terms.",
+                    icon: "error",
+                });
+                return false;
+            } else {
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "jumaboyevqobiljon17@gmail.com",
+                    Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
+                    To: "screamhouseae@gmail.com",
+                    From: "jumaboyevqobiljon17@gmail.com",
+                    Subject: "screamhouseae.com",
+                    Body: html,
+                }).then((message) => {
+                    if ((message = "Ok")) {
+                        swal("Success", "You clicked the button!", "success");
+                        window.location.href = "events.html";
+                        return true;
+                    } else {
+                        swal({
+                            title: "Opps! Error",
+                            text: "Please select a time.",
+                            icon: "error",
+                        });
+                        return false;
+                    }
+                });
+            }
         }
     </script>
 </body>

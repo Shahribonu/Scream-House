@@ -39,20 +39,17 @@
 
                     var len = elm.value.length;
 
-                    // If we're at a particular place, let the user type the slash
-                    // i.e., 12/12/1212
                     if (len !== 1 || len !== 3) {
                         if (e.keyCode == 47) {
                             e.preventDefault();
                         }
                     }
 
-                    // If they don't add the slash, do it for them...
                     if (len === 2) {
                         elm.value += '.';
                     }
 
-                    // If they don't add the slash, do it for them...
+             
                     if (len === 5) {
                         elm.value += '.';
                     }
@@ -68,7 +65,13 @@
 
 <body class="dark">
 
-    <div id="preloader">
+   <div id="preloader">
+        <div class="body">
+            <div class="loader">
+                <div class="inner">
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -159,9 +162,7 @@
                         </div>
                         <div class="item">
                             <h6>Email :</h6>
-                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                    data-cfemail="c1a8afa7ae81a4b2a2a0b1a4a9aeb4b2a4b4a0a4efa2aeac">[email&#160;protected]</a>
-                            </p>
+                            <p><a href="/" class="__cf_email__">screamhouseae@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
