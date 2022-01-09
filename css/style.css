@@ -12,80 +12,13 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: bigger;
-  src: url(fonts/bloodlust.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: blood;
-  src: url(fonts/bloodlust.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: bad;
-  src: url(fonts/BAD\ GRUNGE.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: friday;
-  src: url(fonts/Friday13v12.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: secret;
-  src: url(fonts/I\ tell\ you\ all\ my\ secrets.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: twice;
-  src: url(fonts/MB-ThinkTwice_Regular.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: punk;
-  src: url(fonts/Punktype.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: snorter;
-  src: url(fonts/SNORTER\ PERSONAL\ USE.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: scary;
-  src: url(fonts/ScaryNight-ywj73.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: strange;
-  src: url(fonts/SomethingStrange-vjYD.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
 @font-face {
   font-family: toxic;
   src: url(fonts/Toxia-OwOA.ttf);
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: blackbird;
-  src: url(fonts/BlackBird-vmE2A.otf);
-  font-weight: 400;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -101,8 +34,7 @@ body {
   line-height: 1.3;
   font-weight: 400;
   font-size: 14px;
-  font-family: poppins, sans-serif;
-  /* font-family: snorter; */
+  font-family: toxic, sans-serif;
   overflow-x: hidden;
 }
 .main-content {
@@ -112,7 +44,7 @@ body {
   z-index: 3;
 }
 p {
-  font-family: roboto, sans-serif;
+  font-family: ubuntu, sans-serif;
   font-size: 15px;
   font-weight: 400;
   color: #888;
@@ -607,7 +539,6 @@ a:hover {
 .imgio {
   position: relative;
   height: 550px;
-  margin-bottom: 15px;
 }
 .imgio img{
   height: 100%;
@@ -1065,7 +996,7 @@ a:hover {
 .slider .parallax-slider .caption h1 {
   font-size: 80px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   color: #fff;
   opacity: 0;
   visibility: hidden;
@@ -1074,19 +1005,15 @@ a:hover {
   transition: opacity 0.5s, visibility 0.5s;
 }
 .slider .parallax-slider .caption h1 .stroke {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
-  color: transparent;
+  color: #fff;
 }
 .slider .parallax-slider .caption h1 .stroke span {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
-  color: transparent;
+  color: #fff;
 }
 .slider .parallax-slider .caption .dis {
   margin-top: 30px;
   color: #fff;
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 4px;
   text-transform: uppercase;
   -webkit-transition: all 0.7s;
@@ -1206,7 +1133,7 @@ a:hover {
   text-align: center;
 }
 .center-slider .parallax-slider .caption h1 {
-  font-size: 85px;
+  font-size: 115px;
   font-weight: 800;
   letter-spacing: 4px;
 }
@@ -1428,6 +1355,9 @@ a:hover {
 .page-header .cont {
   padding: 20px 0;
 }
+.page-header .cont h2{
+  font-size: 40px;
+}
 .page-header .cont h4 {
   line-height: 1.6;
 }
@@ -1466,16 +1396,7 @@ a:hover {
   width: 100%;
   height: 100%;
 }
-/* .page-header .img-wrapper .map ::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.4;
-} */
+
 .page-header.proj-det .img-wrapper {
   min-height: 100vh;
 }
@@ -1614,7 +1535,7 @@ a:hover {
   left: 5px;
 }
 .about .items {
-  padding: 35px 40px;
+  padding: 20px 40px;
   -webkit-transition: border 0.3s;
   -o-transition: border 0.3s;
   transition: border 0.3s;
@@ -1622,22 +1543,21 @@ a:hover {
 .about .items .icon {
   font-size: 70px;
   /* margin-bottom: 30px; */
-  margin-right: 20px !important;
- 
 }
 .about .items .icon img{
   width: 120px;
-  
 }
 .about .items .icon svg {
   width: 1em;
   height: 1em;
 }
 .about .items h5 {
+  margin-top: 0;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 20px;
   font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .about .items .more-stroke {
   margin-top: 30px;
@@ -2583,9 +2503,6 @@ a:hover {
   position: relative;
   z-index: 3;
 }
-.min-area .img img{
-  transform: rotateY(180deg);
-}
 .min-area .img:after {
   content: "";
   position: absolute;
@@ -2612,6 +2529,7 @@ a:hover {
   margin-top: 25px;
   padding-left: 25px;
   position: relative;
+  font-family: ubuntu, sans-serif;
 }
 .min-area .content ul li:after {
   content: "";
@@ -3318,13 +3236,14 @@ a:hover {
   color: #c12026;
 }
 .call-action .content h2 {
-  font-family: friday !important;
+  font-family: toxic !important;
   font-size: 6vw;
   font-weight: 800;
   margin-bottom: 20px;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
-  color: transparent;
+  -webkit-text-stroke-color: rgb(255,255,255);
+  /* color: rgb(206, 194, 35); */
+  /* color: #fff; */
 }
 .call-action .content h2 span {
   color: transparent;
