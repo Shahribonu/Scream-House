@@ -606,6 +606,11 @@ a:hover {
 }
 .imgio {
   position: relative;
+  height: 550px;
+  margin-bottom: 15px;
+}
+.imgio img{
+  height: 100%;
 }
 .imgio .cimgio {
   position: absolute;
@@ -1609,14 +1614,20 @@ a:hover {
   left: 5px;
 }
 .about .items {
-  padding: 60px 40px;
+  padding: 35px 40px;
   -webkit-transition: border 0.3s;
   -o-transition: border 0.3s;
   transition: border 0.3s;
 }
 .about .items .icon {
   font-size: 70px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  margin-right: 20px !important;
+ 
+}
+.about .items .icon img{
+  width: 120px;
+  
 }
 .about .items .icon svg {
   width: 1em;
@@ -2571,6 +2582,9 @@ a:hover {
 .min-area .img {
   position: relative;
   z-index: 3;
+}
+.min-area .img img{
+  transform: rotateY(180deg);
 }
 .min-area .img:after {
   content: "";
