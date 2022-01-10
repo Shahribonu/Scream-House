@@ -788,6 +788,7 @@ a:hover {
   -webkit-transition-delay: 1s;
   -o-transition-delay: 1s;
   transition-delay: 1s;
+  font-size: 29px !important;
 }
 .hamenu.open .cont-info:after {
   height: 100vh;
@@ -1134,6 +1135,10 @@ a:hover {
     left: 50px;
     bottom: 10%;
     z-index: 6;
+  }
+  .imgio {
+    position: relative;
+    height: 400px;
   }
   .slide-controls .swiper-pagination-fraction {
     position: absolute;
@@ -3625,7 +3630,7 @@ body.dark .contact .form select {
   .slider .parallax-slider .caption h1,
   .slider-portfolio .swiper-slide .caption h1,
   .slide-full .capt h1 {
-    font-size: 50px;
+    font-size: 70px;
   }
   .slider-portfolio .swiper-slide .bg-img {
     height: 50vh;
@@ -3811,7 +3816,7 @@ body.dark .contact .form select {
   .slider .parallax-slider .caption h1,
   .slide-full .capt h1,
   .slider-portfolio .swiper-slide .caption h1 {
-    font-size: 40px;
+    font-size: 65px;
   }
   .slider .parallax-slider .caption p {
     padding: 0 30px;
@@ -3962,7 +3967,7 @@ body.dark .contact .form select {
   .slide-full .capt h1,
   .slider-portfolio .swiper-slide .caption h1,
   .slider .parallax-slider .caption h1 {
-    font-size: 28px;
+    font-size: 50px;
   }
   .slider .parallax-slider .caption p {
     display: none;
@@ -4194,4 +4199,8 @@ body.dark .contact .form select {
   .work-carousel .swiper-slide {
     padding: 10px 10px 10px 40px;
   }
+}
+
+.favicon img{
+  width: 10px;
 }
