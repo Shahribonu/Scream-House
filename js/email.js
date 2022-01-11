@@ -131,7 +131,7 @@ function sendEmail() {
       Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
       To: "screamhouseae@gmail.com",
       From: "jumaboyevqobiljon17@gmail.com",
-      Subject: "escapehouse.uz",
+      Subject: "escapehouse.com",
       Body: html,
     }).then((message) => {
       if ((message = "Ok")) {

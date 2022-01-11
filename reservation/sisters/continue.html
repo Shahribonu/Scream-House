@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <base href="screamhouseae.com" target="_blank">
+      <!-- <base href="https://screamhouseae.com"> -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -85,7 +85,7 @@
     <div id="navi" class="topnav">
         <div class="container-fluid">
             <div class="logo">
-                <a href="../../index.html"><img src="../../img/scream house.png" alt="Scream House"></a>
+                <a href="/"><img src="../../img/scream house.png" alt="Scream House"></a>
             </div>
             <div class="menu-icon">
                 <span class="icon">
@@ -102,47 +102,43 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8">
                     <div class="menu-links">
-                        <ul class="main-menu">
+                            <ul class="main-menu">
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../index.html" class="link"><span class="nm">01.</span>Home</a>
+                                    <a href="/" class="link"><span class="nm">01.</span>Home</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../about-us.html" class="link"><span class="nm">02.</span>About Us</a>
+                                    <a href="about-us.html" class="link"><span class="nm">02.</span>About Us</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../rooms.html" class="link"><span class="nm">03.</span>Our Games <span
+                                    <a href="rooms.html" class="link"><span class="nm">03.</span>Our Games <span
                                             class="reflect">Book Now!</span></a>
                                 </div>
                             </li>
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../events.html" class="link"><span class="nm">04.</span>Events</a>
+                                    <a href="events.html" class="link"><span class="nm">04.</span>Events</a>
                                 </div>
                             </li>
-                            <!-- <li>
-                                <div class="o-hidden">
-                                    <a href="blog" class="link"><span class="nm">05.</span>Blog</a>
-                                </div>
-                            </li> -->
+                           
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../comment.html" class="link"><span class="nm">06.</span>Comment</a>
+                                    <a href="comment.html" class="link"><span class="nm">06.</span>Comment</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../disclaimer-and-liability.html" class="link"><span
+                                    <a href="disclaimer-and-liability.html" class="link"><span
                                             class="nm">07.</span>Disclaimer and Liability</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="o-hidden">
-                                    <a href="../../contact.html" class="link"><span class="nm">08.</span>Contact</a>&nbsp;<a
+                                    <a href="contact.html" class="link"><span class="nm">08.</span>Contact</a>&nbsp;<a
                                         href="tel:+971565810501"><span class="reflect">+971565810501</span></a>
                                 </div>
                             </li>
@@ -186,7 +182,7 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12">
                                         <div class="cont text-left">
-                                            <h2>Sisters</h2>
+                                            <h2 id="roomType">Sisters</h2>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12">
@@ -207,7 +203,7 @@
                             <div class="col-lg-6 col-xs-12 room-info-genel">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12">
-                                        <a href="./continue.html" class="rezerve-button">BOOK NOW</a>
+                                        <a href="reservation/sisters/continue.html" class="rezerve-button">BOOK NOW</a>
                                     </div>
                                 </div>
                             </div>
@@ -233,11 +229,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form">
-                            <div class="content-header text-center mb-50">
+                            <!-- <div class="content-header text-center mb-50"> -->
                                 <div class="title-header">
                                     <h2 id="dateOfGame">24.01.2022 </h2>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                             <form id="continue_form" onSubmit="return false">
                                 <div class="messages"></div>
                                 <div class="controls row">
@@ -328,7 +324,7 @@
                                             <div class="entry-box w-100">
                                                 <input type="checkbox" id="onaylama" name="onaylama" value="1"
                                                     style="width: 20px; height: 20px;">
-                                                <label for="onaylama"> <a href="../../disclaimer-and-liability.html"
+                                                <label for="onaylama"> <a href="disclaimer-and-liability.html"
                                                         target="_blank">have read and approved all terms</a></label>
                                             </div>
                                             <div class="help-block with-errors"></div>
@@ -357,7 +353,7 @@
                             <h6 class="wow" data-splitting>Let’s Talk</h6>
 
                             <h2 class="wow" data-splitting>Scream House </h2>
-                            <a href="../../contact.html" class="btn-curve btn-lit mt-30"><span>Get In Touch</span></a>
+                            <a href="contact.html" class="btn-curve btn-lit mt-30"><span>Get In Touch</span></a>
                         </div>
                     </div>
                 </div>
@@ -405,7 +401,7 @@
     <script type="text/javascript" src="../../js/calendar/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/calendar/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+       $(document).ready(function () {
 
             $('#sandbox-container input').datepicker({
                 format: "dd.mm.yyyy",
@@ -413,6 +409,10 @@
                 startDate: "+24/03/2021",
                 todayHighlight: true
             });
+
+            let dateRes = document.querySelector('.title-header h2');
+            let dateOne = document.getElementsByClassName('js-date');
+            dateRes.innerHtml = dateOne;
 
         });
 

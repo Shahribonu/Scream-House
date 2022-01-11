@@ -1380,16 +1380,19 @@ a:hover {
   background: #030303;
 }
 .content-header {
-  padding-top: 100px;
+  padding-top: 130px;
 }
 .content-header::before {
-  content: "";
+  content: url("../img/skull.png");
   position: absolute;
-  left: 50%;
-  top: 30px;
-  width: 1px;
-  height: 45px;
-  background: #c12026;
+  fill: red;
+  left: 45%;
+  /* width: -20px; */
+  top: 25px;
+  width: 50px;
+  /* width: 1px; */
+  /* height: 50px;
+  background: #c12026; */
 }
 .content-header .title-header {
   font-weight: 700;
@@ -3569,6 +3572,21 @@ body.dark .contact .form select {
   }
 }
 @media screen and (max-width: 991px) {
+  .content-header {
+    padding-top: 110px;
+}
+  .content-header::before {
+    content: url("../img/skull.png");
+    position: absolute;
+    fill: red;
+    left: 42%;
+    /* width: -20px; */
+    top: 0px;
+    width: 50px;
+    /* width: 1px; */
+    /* height: 50px;
+    background: #c12026; */
+  }
   .md-mb10 {
     margin-bottom: 10px;
   }
@@ -3724,6 +3742,18 @@ body.dark .contact .form select {
   }
 }
 @media screen and (max-width: 767px) {
+  .content-header::before {
+    content: url("../img/skull.png");
+    position: absolute;
+    fill: red;
+    left: 39%;
+    /* width: -20px; */
+    top: 10px;
+    width: 50px;
+    /* width: 1px; */
+    /* height: 50px;
+    background: #c12026; */
+  }
   .sm-mb10 {
     margin-bottom: 10px;
   }
@@ -3909,6 +3939,23 @@ body.dark .contact .form select {
   }
 }
 @media screen and (max-width: 480px) {
+  .content-header::before {
+    content: url("../img/skull.png");
+    position: absolute;
+    fill: red;
+    left: 35%;
+    /* width: -20px; */
+    top: 10px;
+    width: 45px;
+    /* width: 1px; */
+    /* height: 50px;
+    background: #c12026; */
+  }
+  .page-header.proj-det .img-wrapper .video span.video-icon {
+    font-size: 60px;
+    color: #c12026;
+    margin: 0 auto;
+  }
   .hamenu .cont-info {
     display: none;
   }
