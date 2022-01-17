@@ -22636,31 +22636,3 @@
     delete e.default;
   }
 });
-("use strict");
-console.clear();
-let cursor = document.querySelector(".cursor"),
-  smallSpeed = 0.2,
-  largeSpeed = 0.12,
-  data = {
-    x: 0,
-    y: 0,
-    largeX: 0,
-    largeY: 0,
-    targetX: 0,
-    targetY: 0,
-  };
-document.addEventListener("mousemove", (a) => {
-  (data.targetX = a.pageX), (data.targetY = a.pageY);
-});
-const applyStyles = () => {
-    cursor.style.transform = `translate(${data.x - 5}px, ${data.y - 5}px) `;
-  },
-  tick = () => {
-    (data.x += (data.targetX - data.x) * smallSpeed),
-      (data.y += (data.targetY - data.y) * smallSpeed),
-      (data.largeX += (data.targetX - data.largeX) * largeSpeed),
-      (data.largeY += (data.targetY - data.largeY) * largeSpeed),
-      (cursor.style.transform = `translate(${data.x - 5}px, ${data.y - 5}px) `),
-      requestAnimationFrame(tick);
-  };
-tick();

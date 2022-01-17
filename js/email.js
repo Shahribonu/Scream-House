@@ -8,6 +8,13 @@ if (reservation_date) {
   insertDate.innerHTML = date;
 }
 
+const isEmailValid = (value) => {
+  const pattern =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  return pattern.test(value.toLowerCase());
+};
+
 function sendEmail() {
   const room = document.getElementById("roomType").innerHTML;
   const time = document.getElementById("saatler").value;
@@ -23,45 +30,48 @@ function sendEmail() {
     swal({
       title: "Opps!",
       text: "Please select a time.",
-      type: "error",
+      icon: "error",
     });
     return false;
-  } else if (oyuncular == 0) {
+  } else if (oyuncular === 0) {
     swal({
       title: "Opps!",
       text: "Please select the number of players.",
-      type: "error",
+      icon: "error",
     });
     return false;
-  } else if (name == "") {
+  } else if (name === "") {
     swal({
       title: "Opps!",
       text: "Please enter your name and surname.",
-      type: "error",
+      icon: "error",
     });
     return false;
-  } else if (email == "") {
-    swal({ title: "Opps!", text: "Please enter e-mail.", type: "error" });
+  } else if (email === "") {
+    swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
     return false;
-  } else if (tel == "") {
+  } else if (!isEmailValid(email)) {
+    swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
+    return false;
+  } else if (tel === "") {
     swal({
       title: "Opps!",
       text: "Please enter a phone.",
-      type: "error",
+      icon: "error",
     });
     return false;
-  } else if (message == "false") {
+  } else if (message === "") {
     swal({
       title: "Opps!",
       text: "You must read and accept all terms.",
-      type: "error",
+      icon: "error",
     });
     return false;
-  } else if (onaylama == false) {
+  } else if (onaylama === false) {
     swal({
       title: "Opps!",
       text: "You must read and accept all terms.",
-      type: "error",
+      icon: "error",
     });
   } else {
     const html = `
@@ -131,12 +141,12 @@ function sendEmail() {
       Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
       To: "screamhouseae@gmail.com",
       From: "jumaboyevqobiljon17@gmail.com",
-      Subject: "escapehouse.com",
+      Subject: "screamhouse.com",
       Body: html,
     }).then((message) => {
       if ((message = "Ok")) {
         swal("Success", "You clicked the button!", "success");
-        window.location.href = "../../index.html";
+        window.location.href = "/";
         return true;
       } else {
         swal({

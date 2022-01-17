@@ -435,24 +435,6 @@ a:hover {
 .btn-curve.btn-radius {
   border-radius: 30px;
 }
-.cursor {
-  width: 15px;
-  height: 15px;
-  background-color: #ccc;
-  border-radius: 50%;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-  pointer-events: none;
-  z-index: 9999999999;
-  opacity: 0.8;
-}
-.cursor2 {
-  display: none;
-}
 .progress-wrap {
   position: fixed;
   bottom: 30px;
@@ -1383,7 +1365,7 @@ a:hover {
   padding-top: 130px;
 }
 .content-header::before {
-  content: url("../img/skull.png");
+  content: url("../img/skull.ico");
   position: absolute;
   fill: red;
   left: 45%;
@@ -3428,12 +3410,7 @@ body.dark .bg-pattern:after {
   background: #000;
   opacity: 0.96;
 }
-body.dark .cursor {
-  background: #eee;
-}
-body.dark .cursor2 {
-  background: rgba(255, 255, 255, 0.1);
-}
+
 body.dark .imgio .cimgio {
   background: #0e0e0e;
 }
@@ -3576,7 +3553,7 @@ body.dark .contact .form select {
     padding-top: 110px;
 }
   .content-header::before {
-    content: url("../img/skull.png");
+    content: url("../img/skull.ico");
     position: absolute;
     fill: red;
     left: 42%;
@@ -3743,7 +3720,7 @@ body.dark .contact .form select {
 }
 @media screen and (max-width: 767px) {
   .content-header::before {
-    content: url("../img/skull.png");
+    content: url("../img/skull.ico");
     position: absolute;
     fill: red;
     left: 39%;
@@ -3940,7 +3917,7 @@ body.dark .contact .form select {
 }
 @media screen and (max-width: 480px) {
   .content-header::before {
-    content: url("../img/skull.png");
+    content: url("../img/skull.ico");
     position: absolute;
     fill: red;
     left: 35%;
@@ -4250,4 +4227,101 @@ body.dark .contact .form select {
 
 .favicon img{
   width: 10px;
+}
+
+/* !btn */
+.custom-btn {
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-6 {
+  background: rgb(255, 255, 255);
+ color: rgb(0, 0, 0);
+ line-height: 50px;
+ padding: 0;
+ border: none;
+}
+.btn-6 span {
+ position: relative;
+ display: block;
+ width: 100%;
+ height: 100%;
+ text-decoration: none;
+ color: rgb(0, 0, 0);
+ font-size: 15px;
+ font-weight: 700;
+
+}
+.btn-6:before,
+.btn-6:after {
+ position: absolute;
+ content: "";
+ height: 0%;
+ width: 2px;
+ background: rgb(255, 255, 255);
+ color: rgb(255, 255, 255);
+}
+.btn-6:before {
+ right: 0;
+ top: 0;
+ transition: all 500ms ease;
+}
+.btn-6:after {
+ left: 0;
+ bottom: 0;
+ transition: all 500ms ease;
+}
+.btn-6:hover{
+ color: rgb(255, 255, 255);
+ background: rgb(0, 0, 0);
+}
+.btn-6:hover span{
+ color: rgb(255, 255, 255);
+}
+.btn-6:hover:before {
+ transition: all 500ms ease;
+ height: 100%;
+}
+.btn-6:hover:after {
+ transition: all 500ms ease;
+ height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+ position: absolute;
+ content: "";
+ background: rgb(255, 255, 255);
+ 
+}
+.btn-6 span:before {
+ left: 0;
+ top: 0;
+ width: 0%;
+ height: 2px;
+ transition: all 500ms ease;
+}
+.btn-6 span:after {
+ right: 0;
+ bottom: 0;
+ width: 0%;
+ height: 2px;
+ transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+ width: 100%;
+}
+.btn-6 span:hover:after {
+ width: 100%;
 }
