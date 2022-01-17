@@ -756,6 +756,7 @@ a:hover {
   width: 100%;
   height: 100vh;
   background: #0a0a0a;
+  float: right !important;
   padding: 120px 30px 30px;
   overflow: hidden;
   z-index: 9999;
@@ -790,6 +791,7 @@ a:hover {
 .hamenu .menu-links {
   color: #fff;
   margin-top: 30px;
+  text-align: right !important;
 }
 .hamenu .menu-links .o-hidden {
   display: inline-block;
@@ -1125,7 +1127,7 @@ a:hover {
   .slide-controls .swiper-pagination-fraction {
     position: absolute;
     right: 50px;
-    left: auto;
+    /* left: auto; */
     bottom: 11% !important;
     top: auto;
     width: auto;
@@ -1475,7 +1477,7 @@ a:hover {
 .slide-controls .swiper-pagination-fraction {
   position: absolute;
   right: 50px;
-  left: auto;
+  /* left: auto; */
   bottom: 20px;
   top: auto;
   width: auto;
@@ -1658,10 +1660,10 @@ a:hover {
   color: #fff;
 }
 .about.blc:before {
-  background-image: url(../img/giphynoise.png);
-  background-repeat: repeat;
-  background-size: 40%;
-  opacity: 0.015;
+  background-image: url(../img/one.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.15;
 }
 .about.blc .extra-text {
   color: #ddd;

@@ -43,6 +43,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
 
   <body class="dark">
@@ -83,7 +86,7 @@
     <div class="hamenu">
       <div class="container">
         <div class="row">
-          <div class="col-lg-9 col-md-8">
+          <div class="col-lg-12 col-md-8 d-flex justify-content-end">
             <div class="menu-links">
               <ul class="main-menu">
                 <li>
@@ -130,7 +133,7 @@
                 </li>
                 <li>
                   <div class="o-hidden">
-                    <a href="contact.html" class="link"
+                    <a href="index.html" class="link"
                       ><span class="nm">08.</span>Contact</a
                     >&nbsp;<a href="tel:+971565810501"
                       ><span class="reflect">+971565810501</span></a
@@ -140,7 +143,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4">
+          <!-- <div class="col-lg-3 col-md-4">
             <div class="cont-info">
               <div class="item">
                 <h6>Phone :</h6>
@@ -160,7 +163,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -361,7 +364,7 @@
             background-position: center center;
             background-size: cover;
             margin-top: 120px;
-            margin-bottom: 50px;
+            
           "
         >
           <div class="container">
@@ -488,49 +491,155 @@
           </div>
         </section>
 
-        <section class="min-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="img">
-                  <img src="img/c2.png" alt="Escape House" />
-                </div>
-              </div>
-              <div class="col-lg-6 valign">
-                <div class="content">
-                  <h4 class="wow" data-splitting>
-                    Two various scream games in one playground
-                  </h4>
-                  <ul>
-                    <li class="wow fadeInUp" data-wow-delay=".2s">
-                      THE SISTER (scream room) Run for an hour before the nun
-                      brings your heart to death
-                    </li>
-                    <li class="wow fadeInUp" data-wow-delay=".4s">
-                      PSYCHO (scream room) Find the way out and stay alive
-                    </li>
-                  </ul>
-                  <a
-                    href="about-us.html"
-                    class="custom-btn btn-6 mt-40 wow fadeInUp"
-                    data-wow-delay=".8s"
-                    ><span>Discover</span></a
-                  >
+        <section class="contacts">
+          <section class="page-header section-padding">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-7 col-md-9">
+                  <div class="cont">
+                    <h4>
+                      Do you want to work <span class="stroke">together</span>, or
+                      talk about an <span class="stroke">idea?</span> Let's do this.
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+            <div class="img-wrapper">
+              <div class="title">
+                <div class="container">
+                  <h3>Contact Us</h3>
+                </div>
+              </div>
+              <div class="map" id="ieatmaps">
+                <div class="mapouter">
+                  <div class="gmap_canvas">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1033.3553416466443!2d55.22655976443781!3d25.138584978582415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f697879796935%3A0x975ce96edfcfc6de!2sScream%20House!5e1!3m2!1sen!2s!4v1641721526296!5m2!1sen!2s"
+                      width="100%"
+                      height="550"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                    ></iframe>
+                    ><br />
+                    <style>
+                      .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 400px;
+                        width: 100vw;
+                      }
+                    </style>
+                    <a href="https://www.embedgooglemap.net"
+                      >google map on website</a
+                    >
+                    <style>
+                      .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 400px;
+                        width: 100vw;
+                      }
+                    </style>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="contact">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form">
+                    <form id="contact-form" method="Post" onSubmit="return false">
+                      <div class="controls">
+                        <div class="form-group">
+                          <input
+                            id="form_name"
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            required="required"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <input
+                            id="form_email"
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required="required"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <input
+                            id="form_phone"
+                            type="number"
+                            name="phone"
+                            placeholder="Phone"
+                            required="required"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <textarea
+                            id="form_message"
+                            name="message"
+                            placeholder="Message"
+                            rows="4"
+                            required="required"
+                          ></textarea>
+                        </div>
+                        <button
+                          type="submit"
+                          class="custom-btn btn-6"
+                          onclick="sendEmail() "
+                        >
+                          <span>Send Message</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                  <div class="cont-info">
+                    <h2 class="extra-title wow" data-splitting>Let's Talk.</h2>
+                    <div class="item mb-40">
+                      <h5>
+                        <a href="#0"
+                          ><i class="far fa-envelope-open"></i>
+                          <span class="__cf_email__"
+                            >screamhouseae@gmail.com</span
+                          ></a
+                        >
+                      </h5>
+                      <h5>
+                        <i class="fas fa-phone"></i>
+                        +971565810501
+                      </h5>
+                    </div>
+                    <h2 class="extra-title wow" data-splitting>Visit Us.</h2>
+                    <div class="item">
+                      <h6>Al Quoz, First Al Khail street, 8th street</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
+
         <section class="call-action section-padding" data-overlay-dark="0">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
                 <div class="content text-center">
-                  <h6 class="wow" data-splitting>Let’s Talk</h6>
+                  <!-- <h6 class="wow" data-splitting>Let’s Talk</h6> -->
 
                   <h2 class="wow" data-splitting>Scream House</h2>
-                  <a href="contact.html" class="custom-btn btn-6 mt-30"
-                    ><span>Get In Touch</span></a
+                  <a href="index.html" class="custom-btn btn-6 mt-30"
+                    ><span>Contact Us</span></a
                   >
                 </div>
               </div>
@@ -568,7 +677,121 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/scripts.js"></script>
+    <!-- <script src="js/email.js"></script> -->
+    <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1xid59-8VVA5eDu7-c3siGeOMEltHH18&callback=initMap"
+  ></script>
+  <script type="text/javascript">
+    const isEmailValid = (value) => {
+      const pattern =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+      return pattern.test(value.toLowerCase());
+    };
+
+    function sendEmail() {
+      let name = document.getElementById("form_name").value;
+      let email = document.getElementById("form_email").value;
+      let tel = document.getElementById("form_phone").value;
+      let message = document.getElementById("form_message").value;
+      const html = `
+      <div id=":16h" class="ii gt" jslog="20277; u014N:xr6bB; 4:W251bGwsbnVsbCxbXV0."><div id=":1rh" class="a3s aiL "><div class="adM">
+          </div><table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td colspan="3" width="100%" height="40" style="background:#333;font-family:Arial;color:#fff;padding-left:10px;font-size:16px;font-weight:bold">Send Contact message</td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #ccc">
+              <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Name Surname</td>
+              <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+              <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${name}</td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #ccc">
+              <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">E-Mail</td>
+              <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+              <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal"><a href="mailto:navoiy498@gmail.com" target="_blank">${email}</a></td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #ccc">
+              <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Phone</td>
+              <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+              <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${tel}</td>
+            </tr>
+
+            <tr style="border-bottom:1px solid #ccc">
+              <td width="30%" height="36" style="font-family:Arial;color:#666;padding-left:10px;font-size:14px;font-weight:bold">Message</td>
+              <td width="10%" height="36" style="font-family:Arial;color:#666;text-align:center;font-size:14px;font-weight:bold">:</td>
+              <td width="60%" height="36" style="font-family:Arial;color:#666;font-size:14px;font-weight:normal">${message}</td>
+            </tr>
+
+
+          </tbody></table><div class="yj6qo"></div><div class="adL">
+
+    </div></div></div>
+      `;
+
+      if (name == "") {
+        swal({
+          title: "Opps!",
+          text: "Please enter your name and surname.",
+          icon: "error",
+        });
+        return false;
+      } else if (email == "") {
+        swal({ title: "Opps!", text: "Please enter e-mail.", icon: "error" });
+        return false;
+      } else if (!isEmailValid(email)) {
+        swal({
+          title: "Opps!",
+          text: "Email is incorrect",
+          icon: "error",
+        });
+        return false;
+      } else if (tel == "") {
+        swal({
+          title: "Opps!",
+          text: "Please enter a phone.",
+          icon: "error",
+        });
+        return false;
+      } else if (message == "") {
+        swal({
+          title: "Opps!",
+          text: "You must read and accept all terms.",
+          icon: "error",
+        });
+        return false;
+      } else {
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "jumaboyevqobiljon17@gmail.com",
+          Password: "B23793D7C1E7E595BA298324EAE42A380FD3",
+          To: "screamhouseae@gmail.com",
+          From: "jumaboyevqobiljon17@gmail.com",
+          Subject: "screamhouseae.com",
+          Body: html,
+        }).then((message) => {
+          if ((message = "Ok")) {
+            swal("Success", "You clicked the button!", "success");
+            window.location.href = "index.html";
+            return true;
+          } else {
+            swal({
+              title: "Opps!",
+              text: "Please select a time.",
+              icon: "error",
+            });
+            return false;
+          }
+        });
+      }
+    }
+  </script>
   </body>
 </html>
