@@ -100,60 +100,60 @@
     <div class="hamenu">
         <div class="container">
           <div class="row">
-            <div class="col-lg-12 col-md-8 d-flex justify-content-end">
+            <div class="col-lg-12 col-md-8 d-flex align-items-center justify-content-center text-justify">
               <div class="menu-links">
                 <ul class="main-menu">
                   <li>
                     <div class="o-hidden">
-                      <a href="/" class="link"><span class="nm">01.</span>Home</a>
+                      <a href="/" class="link"><span class="nm"></span>Home</a>
                     </div>
                   </li>
                   <li>
                     <div class="o-hidden">
-                      <a href="about-us.html" class="link"
-                        ><span class="nm">02.</span>About Us</a
+                      <a href="../../about-us.html" class="link"
+                        ><span class="nm"></span>About Us</a
                       >
                     </div>
                   </li>
                   <li>
                     <div class="o-hidden">
-                      <a href="rooms.html" class="link"
-                        ><span class="nm">03.</span>Our Games
+                      <a href="../../rooms.html" class="link"
+                        ><span class="nm"></span>Our Games
                         <span class="reflect">Book Now!</span></a
                       >
                     </div>
                   </li>
                   <li>
                     <div class="o-hidden">
-                      <a href="events.html" class="link"
-                        ><span class="nm">04.</span>Events</a
+                      <a href="../../events.html" class="link"
+                        ><span class="nm"></span>Events</a
                       >
                     </div>
                   </li>
   
                   <li>
                     <div class="o-hidden">
-                      <a href="comment.html" class="link"
-                        ><span class="nm">06.</span>Comment</a
+                      <a href="../../comment.html" class="link"
+                        ><span class="nm"></span>Comment</a
                       >
                     </div>
                   </li>
                   <li>
                     <div class="o-hidden">
-                      <a href="disclaimer-and-liability.html" class="link"
-                        ><span class="nm">07.</span>Disclaimer and Liability</a
+                      <a href="../../disclaimer-and-liability.html" class="link"
+                        ><span class="nm"></span>Disclaimer and Liability</a
                       >
                     </div>
                   </li>
-                  <li>
+                  <!-- <li>
                     <div class="o-hidden">
                       <a href="index.html" class="link"
-                        ><span class="nm">08.</span>Contact</a
+                        ><span class="nm"></span>Contact</a
                       >&nbsp;<a href="tel:+971565810501"
                         ><span class="reflect">+971565810501</span></a
                       >
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -216,13 +216,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-xs-12 room-info-genel">
+                            <!-- <div class="col-lg-6 col-xs-12 room-info-genel">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12">
                                         <a href="reservation/sisters/continue.html" class="rezerve-button">BOOK NOW</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -246,14 +246,34 @@
                     <div class="col-lg-12">
                         <div class="form">
                             <!-- <div class="content-header text-center mb-50"> -->
-                                <div class="title-header">
+                                <!-- <div class="title-header">
                                     <h2 id="dateOfGame">24.01.2022 </h2>
-                                </div>
+                                </div> -->
                             <!-- </div> -->
                             <form id="continue_form" onSubmit="return false">
                                 <div class="messages"></div>
                                 <div class="controls row">
-                                    <div class="col-sm-6">
+                                    <div class="col-lg-12">
+                                        <div class="form">
+                                            <form method="get" action="reservation/sisters/continue.html">
+                                                <div class="messages"></div>
+                                                <div class="controls">
+                                                    <div class="form-group">
+                                                        <div class="entry-box w-100" id="sandbox-container">
+                                                            <input autocomplete="off" type="text" name="reservation_date" class="js-date" maxlength="10"
+                                                                placeholder="Choose Date" required="required"
+                                                                data-error="you must choose a date.">
+                                                        </div>
+                                                        <div class="help-block with-errors"></div>
+                                                    </div>
+                                                    <!-- <div class="form-group text-center">
+                                                        <button type="submit" class="custom-btn btn-6"><span>Continue</span></button>
+                                                    </div> -->
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
                                         <div class="form-group">
                                             <div class="entry-box w-100">
                                                 <input type="text" name="odaID" id="odaID" value="1"
@@ -280,7 +300,7 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
                                         <div class="form-group">
                                             <div class="entry-box w-100">
                                                 <select name="oyuncular" id="oyuncular">
@@ -308,7 +328,7 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
                                         <div class="form-group">
                                             <div class="entry-box w-100">
                                                 <input type="email" name="eposta" id="eposta"
@@ -317,7 +337,7 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-12">
                                         <div class="form-group">
                                             <div class="entry-box w-100">
                                                 <input type="number"  name="telefon" id="telefon"
@@ -335,7 +355,7 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <div class="entry-box w-100">
                                                 <input type="checkbox" id="onaylama" name="onaylama" value="1"
@@ -345,11 +365,11 @@
                                             </div>
                                             <div class="help-block with-errors"></div>
                                         </div>
-                                    </div>
+                                    </div> 
                                     <div class="col-md-12">
                                         <div class="form-group text-center">
                                             <button type="submit" class="custom-btn btn-6"
-                                                onclick="sendEmail()"><span>Continue</span></button>
+                                                onclick="sendEmail()"><span>Let's Play</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -369,7 +389,7 @@
                             <!-- <h6 class="wow" data-splitting>Let’s Talk</h6> -->
 
                             <h2 class="wow" data-splitting>Scream House </h2>
-                            <a href="index.html" class="custom-btn btn-6 mt-30"><span>Contact Us</span></a>
+                            <a href="../../index.html" class="custom-btn btn-6 mt-30"><span>Contact Us</span></a>
                         </div>
                     </div>
                 </div>

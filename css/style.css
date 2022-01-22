@@ -791,7 +791,8 @@ a:hover {
 .hamenu .menu-links {
   color: #fff;
   margin-top: 30px;
-  text-align: right !important;
+  /* text-align: right !important; */
+  text-transform: uppercase;
 }
 .hamenu .menu-links .o-hidden {
   display: inline-block;
@@ -834,11 +835,18 @@ a:hover {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  text-align: center !important;
+}
+.hamenu .menu-links .main-menu > ul{
+  text-align: center !important;
 }
 .hamenu .menu-links .main-menu > li span.nm {
   opacity: 0.8;
   font-size: 11px;
   margin-right: 10px;
+}
+.hamenu .menu-links .main-menu > li a{
+  text-align: center !important;
 }
 .hamenu .menu-links .main-menu > li span.reflect {
   font-size: 16px;
@@ -3168,10 +3176,14 @@ a:hover {
 .contact .form input,
 .contact .form textarea,
 .contact .form select {
+ margin: 0 auto !important;
   width: 100%;
   padding: 15px;
-  background: 0 0;
-  border: 1px solid #ddd;
+  background: rgba(73, 73, 73, 0.1);
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid rgb(255, 255, 255);
 }
 .contact .form select option {
   background: #000;
@@ -3544,6 +3556,9 @@ body.dark .contact .form input,
 body.dark .contact .form textarea,
 body.dark .contact .form select {
   color: #fff;
+  display: flex;
+  width: 85%;
+  margin: 0 auto !important;
 }
 @media screen and (min-width: 1200px) {
   .container {
