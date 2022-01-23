@@ -1313,14 +1313,14 @@ a:hover {
 .room-info-genel {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  /* -ms-flex-direction: column; */
+  /* flex-direction: column; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   text-align: left;
   padding: 0 50px;
 }
@@ -1328,16 +1328,30 @@ a:hover {
   font-size: 17px;
   font-weight: 300;
   line-height: 0;
+  /* margin-right: 10px; */
+}
+.cont h2{
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  /* margin-top: 15px; */
 }
 .room-info-genel .rezerve-button {
-  float: right;
+  /* float: right; */
   margin-top: 65px;
-  padding: 10px 60px;
-  background: #c12026;
-  color: #fff;
-  font-size: 14px;
+  padding: 15px 50px;
+  background: transparent;
+  color: rgb(172, 27, 27);
+  border: 3px solid rgb(172, 27, 27);;
+  font-size: 15px;
   font-weight: 500;
   letter-spacing: 1px;
+  transition: 0.3s all ease-in-out;
+}
+.room-info-genel .rezerve-button:hover{
+  background-color: rgb(172, 27, 27);
+  color: #fff;
 }
 .room-info {
   width: 100%;
@@ -1345,10 +1359,11 @@ a:hover {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.room-info span.short-info {
+ span.short-info {
   color: #fff;
   font-weight: 400;
   letter-spacing: 0;
+  margin-right: 25px !important;
 }
 .room-info span.short-info i {
   color: #fff;
@@ -1422,12 +1437,12 @@ a:hover {
 .page-header .img-wrapper .title {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -5%;
   width: 100%;
   text-align: right;
-  -webkit-transform: translateY(-55%);
-  -ms-transform: translateY(-55%);
-  transform: translateY(-55%);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
   z-index: 3;
 }
 .page-header .img-wrapper .title h3 {
@@ -1463,11 +1478,11 @@ a:hover {
 }
 .page-header.proj-det .img-wrapper .video {
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   position: relative;
   float: left;
   z-index: 0;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: rgba(0, 0, 0, 0.1); */
   text-align: center;
   padding: 20% 0;
 }
@@ -1479,12 +1494,12 @@ a:hover {
 .page-header.proj-det .img-wrapper .video span.video-icon i {
   text-shadow: 0 0 50px #000;
 }
-.page-header.proj-det .video .container {
+/* .page-header.proj-det .video .container {
   position: absolute;
   padding: 10px 0 30px;
   bottom: 0;
   left: 20%;
-}
+} */
 .slide-controls .swiper-pagination-fraction {
   position: absolute;
   right: 50px;
@@ -3739,6 +3754,10 @@ body.dark .contact .form select {
   }
 }
 @media screen and (max-width: 767px) {
+  .page-header.proj-det .img-wrapper .video {
+   
+    padding: 30% 0;
+}
   .content-header::before {
     content: url("../img/skull.ico");
     position: absolute;
@@ -3936,6 +3955,9 @@ body.dark .contact .form select {
   }
 }
 @media screen and (max-width: 480px) {
+  .page-header.proj-det .img-wrapper .video {
+    padding: 45% 0;
+}
   .content-header::before {
     content: url("../img/skull.ico");
     position: absolute;
@@ -4137,6 +4159,9 @@ body.dark .contact .form select {
   }
 }
 @media screen and (max-width: 480px) {
+  .page-header.proj-det .img-wrapper .video {
+    padding: 45% 0;
+}
   .topnav .logo {
     width: 220px;
   }
@@ -4217,11 +4242,12 @@ body.dark .contact .form select {
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center !important;
     text-align: center;
     padding: 0 50px;
   }
   .room-info-genel .rezerve-button {
+    /* display: inline-block; */
     float: none;
     margin: 0 auto;
     margin-top: 10px;
@@ -4243,6 +4269,9 @@ body.dark .contact .form select {
   .work-carousel .swiper-slide {
     padding: 10px 10px 10px 40px;
   }
+  .page-header.proj-det .img-wrapper .video {
+    padding: 45% 0;
+}
 }
 
 .favicon img {
