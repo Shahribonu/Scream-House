@@ -1727,6 +1727,19 @@ a:hover {
   margin-bottom: 10px;
   line-height: 20px;
 }
+.intro-section .item h5{
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 30px;
+  /* color: red; */
+}
+.intro-section .item p{
+  color: rgb(172, 27, 27);;
+}
 .intro-section .item ul {
   margin-left: 17px;
 }
